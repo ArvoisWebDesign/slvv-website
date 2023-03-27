@@ -11,11 +11,11 @@ export default function VisualsFont() {
                 my-2 p-2 justify-center w-fit">
                 Archivo
             </Link>
-            <p className="text-2xl mt-2">
-                <span>SLVV</span>&nbsp;
-                <span className="font-black">SLVV</span>&nbsp;
-                <span className="font-black italic">SLVV</span>&nbsp;
-            </p>
+            <div className="text-2xl mt-2">
+                <span>SLVV</span>
+                &nbsp;
+                <span className="font-black italic">SLVV</span>
+            </div>
         </div>
     )
 }

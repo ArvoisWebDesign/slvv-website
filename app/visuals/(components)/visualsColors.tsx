@@ -3,9 +3,18 @@ export default function VisualsColors() {
         <div>
             <h1 className="text-xl font-bold">Colors :</h1>
             <ul>
-                <li>Black : #030305 <span className="border border-slvv30 bg-slvv60">&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
-                <li>White : #fffdfe <span className="border border-slvv30 bg-slvv30">&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
-                <li>Pink / light red : #df486d <span className="border border-slvv30 bg-slvv10">&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+                <li>
+                    Black : #030305 &nbsp;
+                    <span className="border rounded-md border-slvv30 bg-slvv60 px-2"></span>
+                </li>
+                <li>
+                    White : #fffdfe &nbsp;
+                    <span className="border rounded-md border-slvv30 bg-slvv30 px-2"></span>
+                </li>
+                <li>
+                    Pink / light red : #df486d &nbsp;
+                    <span className="border rounded-md border-slvv30 bg-slvv10 px-2"></span>
+                </li>
             </ul>
         </div>
     )
