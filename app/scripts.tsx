@@ -1,6 +1,6 @@
 "use client"
 
-export async function updateNav(navLinkId: string) {
+export async function updateNav(navLinkId:string) {
     // hide nav on load if the toggler is shown
     let domToggleNav = document.getElementById("toggleNav")
     let domNav = document.getElementById("nav")
@@ -25,4 +25,6 @@ export async function updateNav(navLinkId: string) {
                 domNavLink.classList.remove("activeNavLink")
         }
     }
+
+    console.log("updated nav")
 }

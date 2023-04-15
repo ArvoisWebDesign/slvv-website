@@ -38,18 +38,25 @@ const navLinks: { key: number, pageName: string, href: string, navLinkId: string
 ]
 
 async function handleNavLinkClick(event: any) {
+    console.log("nav click")
+    console.log("id nav link clicked : " + event.target.id)
     await updateNav(event.target.id)
 }
 
 export default function Nav() {
     useEffect(() => {
+        console.log("useeffect")
         // set the active navLink style on page load
         let domNavLinks = document.getElementsByClassName("navLink")
         for (let domNavLink of domNavLinks) {
-            if(domNavLink.getAttribute("href") === window.location.pathname) {
-                let id:string | null = domNavLink.getAttribute("id")
-                if(id != null)
-                    updateNav(id)
+            if(domNavLink.getAttribute("href") != null) {
+                if(domNavLink.getAttribute("href") === window.location.pathname) {
+                    let id:string | null = domNavLink.getAttribute("id")
+                    if(id != null) {
+                        console.log("useeffect - update nav id : " + id)
+                        updateNav(id)
+                    }
+                }
             }
         }
     })
