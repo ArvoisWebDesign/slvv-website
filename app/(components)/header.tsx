@@ -5,8 +5,8 @@ import { GiHamburgerMenu } from "react-icons/gi"
 import { updateNav } from "../scripts"
 import Nav from "./nav"
 
-async function handleHomeClick() {
-    await updateNav("homeNavLink")
+function handleHomeClick() {
+    updateNav("homeNavLink")
 }
 
 function handleToggleNav() {
