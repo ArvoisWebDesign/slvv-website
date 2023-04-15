@@ -2,17 +2,17 @@
 
 import Link from "next/link"
 import { GiHamburgerMenu } from "react-icons/gi"
-import { setActiveNavLink } from "../scripts"
+import { updateNav } from "../scripts"
 import Nav from "./nav"
 
-function handleHomeClick() {
-    setActiveNavLink("homeNavLink")
+async function handleHomeClick() {
+    await updateNav("homeNavLink")
 }
 
 function handleToggleNav() {
     let domNav = document.getElementById("nav")
     if(domNav != null) {
-        if(domNav?.classList.contains("hidden"))
+        if(domNav.classList.contains("hidden"))
             domNav.classList.remove("hidden")
         else
             domNav.classList.add("hidden")

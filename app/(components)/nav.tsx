@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useEffect } from "react"
-import { setActiveNavLink } from "../scripts"
+import { updateNav } from "../scripts"
 
 const navLinks: { key: number, pageName: string, href: string, navLinkId: string }[] = [
     { 
@@ -37,8 +37,8 @@ const navLinks: { key: number, pageName: string, href: string, navLinkId: string
     }
 ]
 
-function handleNavLinkClick(event: any) {
-    setActiveNavLink(event.target.id)
+async function handleNavLinkClick(event: any) {
+    await updateNav(event.target.id)
 }
 
 export default function Nav() {
@@ -49,7 +49,7 @@ export default function Nav() {
             if(domNavLink.getAttribute("href") === window.location.pathname) {
                 let id:string | null = domNavLink.getAttribute("id")
                 if(id != null)
-                    setActiveNavLink(id)
+                    updateNav(id)
             }
         }
     })
