@@ -46,6 +46,9 @@ async function handleNavLinkClick(event: any) {
 export default function Nav() {
     useEffect(() => {
         console.log("useeffect")
+        console.log(window)
+        console.log(window.location)
+        console.log(window.location.pathname)
         // set the active navLink style on page load
         let domNavLinks = document.getElementsByClassName("navLink")
         for (let domNavLink of domNavLinks) {
