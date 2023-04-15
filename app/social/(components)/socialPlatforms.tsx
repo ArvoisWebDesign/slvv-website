@@ -20,29 +20,27 @@ const socialPlatformsLinks: { key: number, platformName: string, platformLink: s
 
 export default function SocialPlatforms() {
     return (
-        <div>
-            <h1 className="text-xl font-bold">Where I express myself in plain text :</h1>
-            <ul>
+        <>
+            <h2 className="font-black italic text-4xl mb-3">Social platforms</h2>
+            <div className="flex flex-row flex-wrap gap-6">
                 {socialPlatformsLinks.map((link) => (
-                    <li key={link.key}>
-                        <Link 
-                            href={link.platformLink} 
-                            target="_blank"
-                            className="flex flex-row border 
-                            border-slvv10 rounded-md hover:bg-slvv10 
-                            my-2 p-2 justify-center w-fit">
-                            
-                            {link.logoPath !== "" && link.logoAlt !== "" && 
-                                <Image 
-                                    src={link.logoPath} 
-                                    width={32} height={32} 
-                                    alt={link.logoAlt} />
-                            }
-                            <span className="px-2 flex items-center">{link.platformName}</span>
-                        </Link>
-                    </li>
+                    <Link 
+                        href={link.platformLink} 
+                        target="_blank"
+                        key={link.key}
+                        className="btn">
+                        
+                        {link.logoPath !== "" && link.logoAlt !== "" && 
+                            <Image 
+                                src={link.logoPath} 
+                                width={32} height={32} 
+                                alt={link.logoAlt} />
+                        }
+
+                        <span>{link.platformName}</span>
+                    </Link>
                 ))}
-            </ul>
-        </div>
+            </div>
+        </>
     )
 }

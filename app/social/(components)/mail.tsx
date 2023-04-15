@@ -11,14 +11,13 @@ export default function Mail() {
     }
 
     return (
-        <div>
-            <h1 className="text-xl font-bold">Business inquiries :</h1>
+        <>
+            <h2 className="font-black italic text-4xl mb-3">Business inquiries</h2>
             <button onClick={handleShowMail} 
-                className="border border-slvv10 rounded-md 
-                hover:bg-slvv10 my-2 px-4 py-2 justify-center w-fit">
+                className="btn">
                 Show mail
             </button>
             <p id="mail"></p>
-        </div>
+        </>
     )
 }

@@ -20,26 +20,24 @@ const musicPlatformsLinks: { key: number, platformName: string, platformLink: st
 
 export default function MusicPlatforms() {
     return (
-        <div>
-            <h1 className="text-xl font-bold">Listen to my stuff on your favorite platform :</h1>
-            <ul>
+        <>
+            <h2 className="font-black italic text-4xl mb-3">Music platforms</h2>
+            <div className="flex flex-row flex-wrap gap-6">
                 {musicPlatformsLinks.map((link) => (
-                    <li key={link.key}>
-                        <Link 
-                            href={link.platformLink} 
-                            target="_blank"
-                            className="flex flex-row border 
-                            border-slvv10 rounded-md hover:bg-slvv10 
-                            my-2 p-2 justify-center w-fit">
-                            <Image 
-                                src={link.logoPath} 
-                                width={32} height={32} 
-                                alt={link.logoAlt} />
-                            <span className="px-2 flex items-center">{link.platformName}</span>
-                        </Link>
-                    </li>
+                    <Link 
+                        href={link.platformLink} 
+                        target="_blank"
+                        key={link.key}
+                        className="btn">
+                        <Image 
+                            src={link.logoPath} 
+                            width={32} height={32} 
+                            alt={link.logoAlt} />
+
+                        <span>{link.platformName}</span>
+                    </Link>
                 ))}
-            </ul>
-        </div>
+            </div>
+        </>
     )
 }

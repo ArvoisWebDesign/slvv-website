@@ -1,14 +1,15 @@
-import SocialPlatforms from "./(components)/socialPlatforms"
-import Mail from "./(components)/mail"
+import AboutMe from "./(components)/aboutMe"
+import AboutWebsite from "./(components)/aboutWebsite"
 
-export default function Social() {
+export default function About() {
     return (
         <div className="animate-fadeInLeft">
             <div className="contentIsland mb-6">
-                <SocialPlatforms />
+                <AboutMe />
             </div>
+            
             <div className="contentIsland mb-6">
-                <Mail />
+                <AboutWebsite />
             </div>
         </div>
     )

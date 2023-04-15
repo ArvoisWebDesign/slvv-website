@@ -1,7 +1,7 @@
 export default function AboutMe() {
     return (
-        <div>
-            <h1 className="text-xl font-bold">About me</h1>
+        <>
+            <h2 className="font-black italic text-4xl mb-3">About me</h2>
             <p>
                 I'm a french producer from France, 23yo and slowly coming back after a break with my passion.
             </p>
@@ -14,6 +14,6 @@ export default function AboutMe() {
                 I'm still experiencing trap mixed with wave even deeper and also something new : techno.<br/>
                 Yes, as an artist finding your own world is hard but trying different things can be fun and help you find new ways to express yourself.
             </p>
-        </div>
+        </>
     )
 }

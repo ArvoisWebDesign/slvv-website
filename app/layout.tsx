@@ -1,48 +1,48 @@
 import { Analytics } from "@vercel/analytics/react"
+import { Metadata } from "next"
 
 import "./globals.css"
 import Header from "./(components)/header"
-import Nav from "./(components)/nav"
 import Footer from "./(components)/footer"
 import { Archivo } from "next/font/google"
 
+
 const archivo = Archivo({
     subsets: ["latin"],
-    display: "swap",
+    display: "swap"
 })
 
-export const metadata = {
+export const metadata:Metadata = {
     title: "SLVV Website",
-    description: "SLVV Website - made by SLVV using NEXTJS 😎",
-}
-
-// yes i could put that directly in nav.tsx but i want to try the props system so cry about it
-const navLinks: { key: number, pageName: string, href: string, navLinkId: string }[] = [
-    { 
-        key: 1,
-        pageName: "Home",
-        href: "/",
-        navLinkId: "homeNavLink"
+    description: "Artist landing page",
+    referrer: "origin-when-cross-origin",
+    keywords: ["SLVV", "Music", "Artist", "Compositor", "Wave", "Trap", "Techno", "Alternative"],
+    authors: [{ name: "ArvoisWebdesign", url: "https://github.com/ArvoisWebDesign" }],
+    creator: "ArvoisWebdesign",
+    publisher: "ArvoisWebdesign",
+    icons: {
+        icon: "/icon.png",
+        shortcut: "/icon.png",
+        apple: "/icon.png",
+        other: {
+            rel: "apple-touch-icon-precomposed",
+            url: "/icon.png"
+        }
     },
-    { 
-        key: 2,
-        pageName: "Music",
-        href: "/music",
-        navLinkId: "musicNavLink"
+    openGraph: {
+        title: "SLVV Website",
+        description: "Artist landing page",
+        publishedTime: new Date().toDateString(),
+        authors: ["ArvoisWebdesign"]
     },
-    { 
-        key: 3,
-        pageName: "Visuals",
-        href: "/visuals",
-        navLinkId: "visualsNavLink"
-    },
-    { 
-        key: 4,
-        pageName: "Social",
-        href: "/social",
-        navLinkId: "socialNavLink"
+    twitter: {
+        card: "summary_large_image",
+        title: "SLVV Website",
+        description: "Artist landing page",
+        creator: "@nextjs",
+        images: ["https://slvv.vercel.app/opengraph-image.png"]
     }
-]
+}
 
 export default function RootLayout({
     children,
@@ -51,18 +51,12 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className={archivo.className}>
-            <body className="bg-slvvBackground bg-cover bg-center text-slvv30 text-md">
-                <div className="bg-slvv30 text-slvv10 grid grid-cols-1 lg:grid-cols-3">
-                    <div className="text-center lg:text-left p-2">
-                        <Header />
-                    </div>
-                    <Nav navLinks={navLinks} />
-                </div>
+            <body className="bg-slvvBackground bg-cover bg-fixed bg-center text-slvv30 text-md 
+                grid grid-rows-[min-content_auto_min-content_0px] min-h-screen">
+                <Header />
                 
-                <main className="">
-                    <div className="min-h-screen p-6 lg:w-2/3 lg:mx-auto">
-                        {children}
-                    </div>
+                <main className="p-6 lg:w-2/3 lg:mx-auto">
+                    {children}
                 </main>
                 
                 <Footer />

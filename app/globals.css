@@ -42,32 +42,71 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+  --slvv60: #030305;
+  --slvv30: #fffdfe;
+  --slvv10: #df486d;
 }
+
+
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
+}
+
+#toggleNav svg {
+    height: 2rem !important;
+    width: 2rem !important;
 }
 
 .activeNavLink {
-    background-color: #df486d;
-    color: #fffdfe;
+    background-color: var(--slvv10);
+    color: var(--slvv60);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.italic {
+    padding-right: 0.4em;
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 0.75rem;
+    border: 1px solid var(--slvv10);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem var(--slvv60);
+    font-weight: bold;
+    width: fit-content;
+}
+
+.btn:hover {
+    background-color: var(--slvv10);
+    color: var(--slvv60);
+}
+
+.contentIsland {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background-color: rgb(3 3 5 / 0.5);
+    box-shadow: 0 0 3rem -1rem #030305;
+}
+
+#twitter-widget-0 {
+    border-radius: 1rem !important;
+    border: 0 !important;
+}
+
+#twitter-widget-0 div {
+    background-color: var(--slvv60);
 }

@@ -1,23 +1,19 @@
-"use client"
-
-import { useEffect } from "react"
-import { setActiveNavLink } from "./scripts"
-import AboutMe from "./(components)/aboutMe"
-import AboutWebsite from "./(components)/aboutWebsite"
+import TweeterEmbed from "./(components)/tweeterEmbed"
 
 export default function Home() {
-    useEffect(() => {
-        setActiveNavLink("homeNavLink")
-    })
-
     return (
-        <div className="lg:flex lg:flex-row lg:gap-6">
-            <div className="mb-6 flex flex-1">
-                <AboutMe />
+        <div className="animate-fadeInLeft">
+            <div className="contentIsland mb-6">
+                <h2 className="font-black italic text-4xl mb-3">Last release</h2>
+                <iframe
+                    src="https://open.spotify.com/embed/track/3ctp1bMufoPBn7YhR31kQU?utm_source=generator"
+                    allow="encrypted-media" width="100%" height="152"></iframe>
             </div>
-            
-            <div className="mb-6 flex flex-1">
-                <AboutWebsite />
+            <div className="contentIsland mb-6">
+                <h2 className="font-black italic text-4xl mb-3">Stay connected</h2>
+                <div className="bg-slvv60 bg-opacity-50 rounded-xl">
+                    <TweeterEmbed />
+                </div>
             </div>
         </div>
     )
