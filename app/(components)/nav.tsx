@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { useEffect } from "react"
+import { usePathname } from "next/navigation"
 import { updateNav } from "../scripts"
 
 const navLinks: { key: number, pageName: string, href: string, navLinkId: string }[] = [
@@ -44,16 +45,18 @@ async function handleNavLinkClick(event: any) {
 }
 
 export default function Nav() {
+    const pathName = usePathname()
     useEffect(() => {
         console.log("useeffect")
         console.log(window)
         console.log(window.location)
         console.log(window.location.pathname)
+        console.log(pathName)
         // set the active navLink style on page load
         let domNavLinks = document.getElementsByClassName("navLink")
         for (let domNavLink of domNavLinks) {
             if(domNavLink.getAttribute("href") != null) {
-                if(domNavLink.getAttribute("href") === window.location.pathname) {
+                if(domNavLink.getAttribute("href") === pathName) {
                     let id:string | null = domNavLink.getAttribute("id")
                     if(id != null) {
                         console.log("useeffect - update nav id : " + id)
