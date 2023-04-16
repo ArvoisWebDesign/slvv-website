@@ -3,7 +3,7 @@ import AboutWebsite from "./(components)/aboutWebsite"
 
 export default function About() {
     return (
-        <div className="animate-fadeInLeft">
+        <div className="animate-opacity">
             <div className="contentIsland mb-6">
                 <AboutMe />
             </div>

@@ -3,7 +3,7 @@ import Mail from "./(components)/mail"
 
 export default function Social() {
     return (
-        <div className="animate-fadeInLeft">
+        <div className="animate-opacity">
             <div className="contentIsland mb-6">
                 <SocialPlatforms />
             </div>

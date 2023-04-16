@@ -6,7 +6,6 @@ import Header from "./(components)/header"
 import Footer from "./(components)/footer"
 import { Archivo } from "next/font/google"
 
-
 const archivo = Archivo({
     subsets: ["latin"],
     display: "swap"
@@ -21,13 +20,18 @@ export const metadata:Metadata = {
     creator: "ArvoisWebdesign",
     publisher: "ArvoisWebdesign",
     icons: {
-        icon: "/icon.png",
-        shortcut: "/icon.png",
-        apple: "/icon.png",
+        icon: "./public/icon-32x32.png",
+        shortcut: "./public/icon-128x128.png",
+        apple: "./public/icon-128x128.png",
         other: {
             rel: "apple-touch-icon-precomposed",
-            url: "/icon.png"
+            url: "./public/icon-128x128.png"
         }
+    },
+    viewport: {
+        width: 'device-width',
+        initialScale: 1,
+        maximumScale: 1,
     },
     openGraph: {
         title: "SLVV Website",
@@ -39,7 +43,7 @@ export const metadata:Metadata = {
         card: "summary_large_image",
         title: "SLVV Website",
         description: "Artist landing page",
-        creator: "@nextjs",
+        creator: "@slvv808",
         images: ["https://slvv.vercel.app/opengraph-image.png"]
     }
 }

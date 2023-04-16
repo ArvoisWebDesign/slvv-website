@@ -16,7 +16,7 @@ module.exports = {
                 "slvv10": "#df486d"
             },
             backgroundImage: {
-                "slvvBackground": "url('../public/background-blurred.png')"
+                "slvvBackground": "url('../public/background-blurred.webp')"
             },
             animation: {
                 fadeInLeft: "fadeInLeft 0.5s ease-in-out",

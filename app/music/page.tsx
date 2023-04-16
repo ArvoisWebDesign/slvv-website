@@ -3,7 +3,7 @@ import MusicWorkInProgress from "./(components)/musicWorkInProgress"
 
 export default function Music() {
     return (
-        <div className="animate-fadeInLeft">
+        <div className="animate-opacity">
             <div className="contentIsland mb-6">
                 <MusicPlatforms />
             </div>

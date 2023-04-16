@@ -15,8 +15,9 @@ export default function TweeterEmbed() {
         <>
             <Link 
                 href="https://twitter.com/SLVV808?ref_src=twsrc%5Etfw" 
-                data-height="300" data-dnt="true" data-tweet-limit="5"
-                className="twitter-timeline twitterEmbedLoading" data-theme="dark" data-chrome="transparent noborders">
+                data-height="300" data-dnt="true" data-tweet-limit="5" title="Twitter embed"
+                data-theme="dark" data-chrome="transparent noborders"
+                className="twitter-timeline twitterEmbedLoading">
                 Loading timeline...
             </Link>
         </>

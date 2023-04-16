@@ -5,7 +5,7 @@ import VisualsProfilePicture from "./(components)/visualsProfilePicture"
 
 export default function Visuals() {
     return (
-        <div className="animate-fadeInLeft">
+        <div className="animate-opacity">
             <div className="flex flex-row flex-wrap gap-6 mb-6">
                 <div className="contentIsland">
                 <VisualsColors />
