@@ -6,15 +6,15 @@ const socialPlatformsLinks: { key: number, platformName: string, platformLink: s
         key: 1,
         platformName: "Twitter",
         platformLink: "https://twitter.com/SLVV808",
-        logoPath: "",
-        logoAlt: ""
+        logoPath: "/logo-twitter.png",
+        logoAlt: "Logo twitter"
     },
     { 
         key: 2,
         platformName: "Instagram",
         platformLink: "https://www.instagram.com/slvv808",
-        logoPath: "",
-        logoAlt: ""
+        logoPath: "/logo-instagram.png",
+        logoAlt: "Logo instagram"
     }
 ]
 
@@ -34,6 +34,7 @@ export default function SocialPlatforms() {
                             <Image 
                                 src={link.logoPath} 
                                 width={32} height={32} 
+                                sizes="128"
                                 alt={link.logoAlt} />
                         }
 

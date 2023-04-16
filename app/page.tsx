@@ -1,4 +1,4 @@
-import TweeterEmbed from "./(components)/tweeterEmbed"
+import TwitterEmbed from "./(components)/twitterEmbed"
 
 export default function Home() {
     return (
@@ -11,8 +11,8 @@ export default function Home() {
             </div>
             <div className="contentIsland mb-6">
                 <h2 className="font-black italic text-4xl mb-3">Stay connected</h2>
-                <div className="bg-slvv60 bg-opacity-50 rounded-xl">
-                    <TweeterEmbed />
+                <div className="bg-slvv60 bg-opacity-50 rounded-2xl">
+                    <TwitterEmbed />
                 </div>
             </div>
         </div>

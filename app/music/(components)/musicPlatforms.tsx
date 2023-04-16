@@ -6,14 +6,14 @@ const musicPlatformsLinks: { key: number, platformName: string, platformLink: st
         key: 1,
         platformName: "Soundcloud",
         platformLink: "https://soundcloud.com/slvv808/tracks",
-        logoPath: "/logo-soundcloud-white.png",
+        logoPath: "/logo-soundcloud.png",
         logoAlt: "Logo Soundcloud"
     },
     { 
         key: 2,
         platformName: "Spotify",
         platformLink: "https://open.spotify.com/artist/5HnKnIrc6G2vBKxmAXoLXp?si=pUGp2R85Qei4NMBTz4sAyA",
-        logoPath: "/logo-spotify-white.png",
+        logoPath: "/logo-spotify.png",
         logoAlt: "Logo Spotify"
     }
 ]
@@ -32,6 +32,7 @@ export default function MusicPlatforms() {
                         <Image 
                             src={link.logoPath} 
                             width={32} height={32} 
+                            sizes="128"
                             alt={link.logoAlt} />
 
                         <span>{link.platformName}</span>

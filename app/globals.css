@@ -83,6 +83,7 @@ a {
     gap: 0.75rem;
     align-items: center;
     padding: 0.75rem;
+    color: var(--slvv30);
     border: 1px solid var(--slvv10);
     border-radius: 0.5rem;
     box-shadow: 0 0 1rem var(--slvv60);
@@ -90,9 +91,17 @@ a {
     width: fit-content;
 }
 
+.btn img {
+    filter: invert(100%);
+}
+
 .btn:hover {
     background-color: var(--slvv10);
     color: var(--slvv60);
+}
+
+.btn:hover img {
+    filter: invert(0%);
 }
 
 .contentIsland {
@@ -102,11 +111,9 @@ a {
     box-shadow: 0 0 3rem -1rem #030305;
 }
 
-#twitter-widget-0 {
-    border-radius: 1rem !important;
-    border: 0 !important;
-}
-
-#twitter-widget-0 div {
-    background-color: var(--slvv60);
+a.twitterEmbedLoading {
+    display: block;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
 }

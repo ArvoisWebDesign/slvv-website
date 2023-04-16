@@ -10,8 +10,9 @@ export default function MusicWorkInProgress() {
                 target="_blank"
                 className="btn mb-3">
                 <Image 
-                    src="/logo-soundcloud-white.png"
+                    src="/logo-soundcloud.png"
                     width={32} height={32} 
+                    sizes="128"
                     alt="Logo Soundcloud" />
                 <span>VISION</span>
             </Link>

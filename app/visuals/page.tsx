@@ -6,12 +6,12 @@ import VisualsProfilePicture from "./(components)/visualsProfilePicture"
 export default function Visuals() {
     return (
         <div className="animate-fadeInLeft">
-            <div className="flex flex-row gap-6">
-                <div className="contentIsland mb-6">
+            <div className="flex flex-row flex-wrap gap-6 mb-6">
+                <div className="contentIsland">
                 <VisualsColors />
                 </div>
 
-                <div className="contentIsland mb-6">
+                <div className="contentIsland">
                 <VisualsFont />
                 </div>
             </div>
